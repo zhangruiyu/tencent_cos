@@ -1,39 +1,21 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://cloud.tencent.com/document/product/436/7749
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
 ```dart
-const like = 'sample';
+await COSClient(COSConfig(
+credentials["secretId"],
+credentials["secretKey"],
+credentials["bucketName"],
+credentials["region"],
+))
+.putObject(
+'cos存储放的路径', '本地的file',token: '如果后台采用临时秘钥这里需要传入值,不然403错误,如果永久秘钥写在客户端,token可以不传入');
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+参考:https://cloud.tencent.com/developer/article/1878729

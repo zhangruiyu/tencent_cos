@@ -1,7 +1,4 @@
-library tencent_cos;
+library flutter_tencent_cos;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/cos_client.dart';
+export 'src/cos_config.dart';
