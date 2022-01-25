@@ -2,6 +2,7 @@
 ## Getting started
 
 flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://cloud.tencent.com/document/product/436/7749
+如果可以麻烦右上角给点个like吧
 
 ## Usage
 
@@ -22,4 +23,4 @@ credentials["region"],
 
 ## Additional information
 
-参考:https://cloud.tencent.com/developer/article/1878729
+具体参考:https://cloud.tencent.com/developer/article/1878729
