@@ -5,7 +5,7 @@ flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://clou
 如果可以麻烦右上角给点个like吧
 
 ## Usage
-
+支持putObject deleteObject listObject三方方法,具体参考cos文档
 ```dart
 //如果后台采用临时秘钥这里需要传入值,不然403错误,如果永久秘钥写在客户端,token可以不传入
 String token = "";
