@@ -24,7 +24,8 @@ class COSClient extends COSClientBase {
     return ListBucketResult(content.rootElement);
   }
 
-  putObject(String objectKey, String filePath, {String? token}) async {
+  Future<String?> putObject(String objectKey, String filePath,
+      {String? token}) async {
     cosLog("putObject");
     var f = File(filePath);
     int flength = await f.length();
@@ -39,9 +40,11 @@ class COSClient extends COSClientBase {
     var response = await req.close();
     cosLog("request-id:" + (response.headers["x-cos-request-id"]?.first ?? ""));
     if (response.statusCode != 200) {
-      cosLog("putObject error");
       String content = await response.transform(utf8.decoder).join("");
-      throw COSException(response.statusCode, content);
+      cosLog("putObject error content: $content");
+      return null;
+    } else {
+      return objectKey;
     }
   }
 
