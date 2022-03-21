@@ -51,13 +51,13 @@ class COSClient extends COSClientBase {
     cosLog("putObject");
     var f = File(filePath);
     int flength = await f.length();
-    var fs = f.openRead();
     var req = await getRequest("PUT", objectKey,
         headers: {
           "content-type": "image/jpeg",
           "content-length": flength.toString()
         },
         token: token);
+    var fs = f.openRead();
     await req.addStream(fs);
     var response = await req.close();
     cosLog("request-id:" + (response.headers["x-cos-request-id"]?.first ?? ""));

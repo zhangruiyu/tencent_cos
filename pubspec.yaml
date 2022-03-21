@@ -1,6 +1,6 @@
 name: tencent_cos
 description: flutter cos插件
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/zhangruiyu/tencent_cos
 
 environment:

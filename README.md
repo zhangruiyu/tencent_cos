@@ -1,10 +1,16 @@
 
 ## Getting started
 
+## 添加依赖
+```yaml
+dependencies:
+  saver_gallery: ^1.0.5
+```
+
 flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://cloud.tencent.com/document/product/436/7749
 如果可以麻烦右上角给点个like吧
 
-## Usage
+## 使用方法
 支持putObject deleteObject listObject三方方法,具体参考cos文档
 ```dart
 //如果后台采用临时秘钥这里需要传入值,不然403错误,如果永久秘钥写在客户端,token可以不传入
