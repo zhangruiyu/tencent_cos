@@ -1,32 +1,39 @@
+<!-- 
+This README describes the package. If you publish this package to pub.dev,
+this README's contents appear on the landing page for your package.
+
+For information about how to write a good package README, see the guide for
+[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+
+For general information about developing packages, see the Dart guide for
+[creating packages](https://dart.dev/guides/libraries/create-library-packages)
+and the Flutter guide for
+[developing packages and plugins](https://flutter.dev/developing-packages). 
+-->
+
+TODO: Put a short description of the package here that helps potential users
+know whether this package might be useful for them.
+
+## Features
+
+TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
-## 添加依赖
-```yaml
-dependencies:
-  saver_gallery: ^1.0.5
-```
+TODO: List prerequisites and provide or point to information on how to
+start using the package.
 
-flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://cloud.tencent.com/document/product/436/7749
-如果可以麻烦右上角给点个like吧
+## Usage
 
-## 使用方法
-支持putObject deleteObject listObject三方方法,具体参考cos文档
+TODO: Include short and useful examples for package users. Add longer examples
+to `/example` folder. 
+
 ```dart
-//如果后台采用临时秘钥这里需要传入值,不然403错误,如果永久秘钥写在客户端,token可以不传入
-String token = "";
-//本地的file
-String localPath = "";
-//cos路径
-String cosPath = "abc/123.png";
-await COSClient(COSConfig(
-credentials["secretId"],
-credentials["secretKey"],
-credentials["bucketName"],
-credentials["region"],
-)).putObject(cosPath, localPath, token: token);
+const like = 'sample';
 ```
 
 ## Additional information
 
-具体参考:https://cloud.tencent.com/developer/article/1878729
+TODO: Tell users more about the package: where to find more information, how to 
+contribute to the package, how to file issues, what response they can expect 
+from the package authors, and more.
