@@ -4,7 +4,7 @@
 ## 添加依赖
 ```yaml
 dependencies:
-  saver_gallery: ^1.0.5
+  tencent_cos: ^1.0.6
 ```
 
 flutter 版本的插件腾讯cos插件,不依赖原生插件.参考:https://cloud.tencent.com/document/product/436/7749
