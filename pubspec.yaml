@@ -1,6 +1,6 @@
 name: tencent_cos
 description: flutter cos插件
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/zhangruiyu/tencent_cos
 
 environment:
@@ -10,9 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  convert: ^3.0.1
-  crypto: ^3.0.1
-  xml: ^5.3.1
+  convert: ^3.0.2
+  crypto: ^3.0.2
+  xml: ^6.1.0
 
 dev_dependencies:
   flutter_test:
