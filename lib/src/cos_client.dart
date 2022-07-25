@@ -25,12 +25,12 @@ class COSClient extends COSClientBase {
   }
 
   Future<String?> putObjectWithFileData(String objectKey, List<int> fileData,
-      {String? token}) async {
+      {String? token,String? contentType = "image/jpeg"}) async {
     cosLog("putObject");
     int fileLength = fileData.length;
     var req = await getRequest("PUT", objectKey,
         headers: {
-          "content-type": "image/jpeg",
+          "content-type": contentType,
           "content-length": fileLength.toString()
         },
         token: token);
@@ -47,13 +47,13 @@ class COSClient extends COSClientBase {
   }
 
   Future<String?> putObject(String objectKey, String filePath,
-      {String? token}) async {
+      {String? token,String? contentType = "image/jpeg"}) async {
     cosLog("putObject");
     var f = File(filePath);
     int flength = await f.length();
     var req = await getRequest("PUT", objectKey,
         headers: {
-          "content-type": "image/jpeg",
+          "content-type": contentType,
           "content-length": flength.toString()
         },
         token: token);
